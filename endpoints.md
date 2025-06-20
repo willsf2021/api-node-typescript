@@ -1,24 +1,57 @@
-# Endpoints
+# API Endpoints
 
-### v1
+## v1
 
-### **Cidades** (Privado)
+---
 
-- GET /cidades _Busca uma lista de cidades, com paginação e filtro por nome_
-- POST /cidades _Cria uma nova cidade_
-- GET /cidades/:id _Busca apenas uma cidade pelo seu id_
-- PUT /cidades/:id _Atualiza uma cidade pelo seu id_
-- DELETE /cidades/:id _Apaga uma cidade pelo seu id_
+### Cidades (Privado)
 
-### **Pessoas** (Privado)
+Endpoints para gerenciar cidades:
 
-- GET /pessoas _Busca uma lista de pessoas, com paginação e filtro por nome_
-- POST /pessoas \_Cria uma nova pessoa
-- GET /pessoas/:id _Busca apenas uma pessoa pelo seu id_
-- PUT /pessoas/:id _Atualiza uma pessoa pelo seu id_
-- DELETE /pessoas/:id _Apaga uma pessoa pelo seu id_
+- `GET /cidades`  
+  Retorna uma lista de cidades com paginação e filtro por nome, filtro por id.
 
-### **Login** (Público)
+- `POST /cidades`  
+  Cria uma nova cidade.
 
-- POST /entrar _Permite um usuário existente no sistema gerar um token para acessar os endpoints privados_
-- POST /cadastrar _Permite criar um novo usuário_
+- `GET /cidades/:id`  
+  Retorna os dados de uma cidade específica pelo ID.
+
+- `PUT /cidades/:id`  
+  Atualiza os dados de uma cidade específica pelo ID.
+
+- `DELETE /cidades/:id`  
+  Remove uma cidade específica pelo ID.
+
+---
+
+### Pessoas (Privado)
+
+Endpoints para gerenciar pessoas:
+
+- `GET /pessoas`  
+  Retorna uma lista de pessoas com paginação e filtro por nome.
+
+- `POST /pessoas`  
+  Cria uma nova pessoa.
+
+- `GET /pessoas/:id`  
+  Retorna os dados de uma pessoa específica pelo ID.
+
+- `PUT /pessoas/:id`  
+  Atualiza os dados de uma pessoa específica pelo ID.
+
+- `DELETE /pessoas/:id`  
+  Remove uma pessoa específica pelo ID.
+
+---
+
+### Login (Público)
+
+Endpoints de autenticação:
+
+- `POST /entrar`  
+  Gera um token de acesso para um usuário existente.
+
+- `POST /cadastrar`  
+  Cria um novo usuário.
