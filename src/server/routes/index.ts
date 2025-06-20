@@ -8,9 +8,7 @@ router.get("/", (_, res) => {
 });
 
 router.post("/teste", (req, res) => {
-  console.log(req.params);
-
-  return res.status(StatusCodes.ACCEPTED).json(req.body);
+  return res.status(StatusCodes.ACCEPTED);
 });
 
 export { router };
