@@ -25,7 +25,7 @@ Tabela usada para guardar as pessoas cadastradas no sistema.
 **Relacionamento:**
 
 - `cidadeId` é uma chave estrangeira (FK) que referencia o campo `id` da tabela `Cidade`.
-- Relacionamento 1:1 entre Pessoa e Cidade.
+- Relacionamento N:1 entre Pessoa e Cidade.
 
 ---
 
