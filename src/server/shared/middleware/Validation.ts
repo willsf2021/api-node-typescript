@@ -31,11 +31,10 @@ export const validation: TValidation =
 
         errorsResult[key] = errors;
       }
-
-      if (Object.entries(errorsResult).length === 0) {
-        return next();
-      } else {
-        res.status(StatusCodes.BAD_REQUEST).json({ errors: errorsResult });
-      }
     });
+    if (Object.entries(errorsResult).length === 0) {
+      return next();
+    } else {
+      res.status(StatusCodes.BAD_REQUEST).json({ errors: errorsResult });
+    }
   };

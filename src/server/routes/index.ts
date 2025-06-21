@@ -8,12 +8,34 @@ router.get("/", (_, res) => {
   return res.send("Ola, DEV!");
 });
 
+router.get(
+  "/cidades",
+  CidadesController.getAllValidation,
+  CidadesController.getAll
+);
+
 router.post(
   "/cidades",
-  // Middle de Validação, se validado, next, daí chama o método do controller!
   CidadesController.createValidation,
-  // Método do controller sendo chamado após validação!
   CidadesController.create
+);
+
+router.get(
+  "/cidades/:id",
+  CidadesController.getByIdValidation,
+  CidadesController.getById
+);
+
+router.put(
+  "/cidades/:id",
+  CidadesController.updateByIdValidation,
+  CidadesController.updateById
+);
+
+router.delete(
+  "/cidades/:id",
+  CidadesController.deleteByIdValidation,
+  CidadesController.deleteById
 );
 
 export { router };
