@@ -8,6 +8,12 @@ router.get("/", (_, res) => {
   return res.send("Ola, DEV!");
 });
 
-router.post("/cidades", CidadesController.create);
+router.post(
+  "/cidades",
+  // Middle de Validação, se validado, next, daí chama o método do controller!
+  CidadesController.createValidation,
+  // Método do controller sendo chamado após validação!
+  CidadesController.create
+);
 
 export { router };
