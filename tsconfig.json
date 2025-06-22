@@ -13,7 +13,8 @@
     /* Language and Environment */
     "target": "es2020",
     "rootDir": "./src",
-    "outDir": "./build", /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+
+    "outDir": "./build" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
     // "lib": [],                                        /* Specify a set of bundled library declaration files that describe the target runtime environment. */
     // "jsx": "preserve",                                /* Specify what JSX code is generated. */
     // "libReplacement": true,                           /* Enable lib replacement. */
@@ -111,5 +112,6 @@
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
-  }
+  },
+  "exclude": ["./jest.config.ts", "./node_modules", "./tests", "./build"]
 }
